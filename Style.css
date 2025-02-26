@@ -1,0 +1,258 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(120deg, #1C1C1C, #3A3A3A, #000000);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f1ce0a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 10px #f1ce0a, 0 0 20px #ffae00;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px #ffae00, 0 0 30px #ff4500;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    display: inline-block;
+    transition:transform 0.5s ease,color 0.3s ease;
+}
+nav a:hover {
+    color: #f1ce0a;
+    border-bottom: 2px solid #f1ce0a;
+    transform: scale(1.1);
+}
+
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+
+.mainimg img {
+    height: 200px;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease;
+}
+.mainimg img:hover {
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.8));
+    transform: translateY(0) scale(1.05);
+}
+
+.maincontent h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+.maincontent h1 span {
+    color: #f1ce0a;
+}
+.typingtext {
+    font-size: 24px;
+    margin-top: 20px;
+}
+.typingtext span {
+    color: #FFA500;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #FFA500; 
+    animation: typing 3s steps(20, end) forwards,blinkCursor 0.6s infinite ;
+    padding-left: 30px;
+    font-size: 40px;
+}
+h1 span{
+    animation: glow 3s infinite alternate ease-in;
+}
+.social{
+    margin-top: 10px;
+}
+.social a {
+    margin: 10px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+.social a:hover {
+    transform: translateY(-5px);
+}
+
+a i {
+    color: black; 
+    transition: transform 0.5s ease,color 0.5s ease,border 0.5s ease,background 0.5s ease;
+    font-size: 25px;
+    border: 2px black solid;
+    border-radius: 50%;
+    padding: 5px;
+    margin:10px ;
+}
+a i:hover {
+    color: #FFA500; 
+    border: 2px solid #FFA500;
+    transform:translateY(-5px) scale(1.2);
+}
+.social a:nth-child(1) i{
+  transform: background 0.5s ease;
+}
+.social a:nth-child(1) i:hover{
+    background: black;
+}
+.social a:nth-child(2) i{
+    transform: background 0.5s ease;
+}
+.social a:nth-child(3) i{
+    transform: background 0.5s ease;
+}
+.social a:nth-child(2) i:hover {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.social a:nth-child(3) i:hover {
+    background-color:#000000;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #f1ce0a, 0 0 10px #f1ce0a, 0 0 15px #f1ce0a;
+    }
+    50% {
+        text-shadow: 0 0 10px #FFA500, 0 0 20px #FFA500, 0 0 30px #FF4500, 0 0 40px #FF4500;
+    }
+    100% {
+        text-shadow: 0 0 5px #f1ce0a, 0 0 10px #f1ce0a, 0 0 15px #f1ce0a;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 325px; 
+    }
+}
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .maincontent h1 {
+        font-size: 35px;
+    }
+
+    .typingtext span {
+        font-size: 32px;
+        max-width: 275px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .mainimg img {
+        height: 160px;
+    }
+
+    .maincontent h1 {
+        font-size: 30px;
+    }
+
+    .typingtext span {
+        font-size: 28px;
+        max-width: 250px;
+    }
+
+    .social a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .mainimg img {
+        height: 140px;
+    }
+
+    .maincontent h1 {
+        font-size: 26px;
+    }
+
+    .typingtext span {
+        font-size: 24px;
+        max-width: 220px;
+    }
+
+    .social a {
+        font-size: 20px;
+    }
+}
